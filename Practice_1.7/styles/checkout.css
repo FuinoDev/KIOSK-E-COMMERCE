@@ -1,0 +1,245 @@
+@font-face {
+    font-family: 'FuinoFont';
+    src: url('path-to-your-font-file.woff2') format('woff2'),
+         url('path-to-your-font-file.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: url('../img/ban.jpeg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+.header {
+    top: 0;
+    width: 100%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0);
+    z-index: 1000;
+    background-color: transparent; /* Ensure header is transparent */
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+#navbar {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+    margin: 0 10px;
+    background-color: rgba(255, 255, 255, 0); /* Ensure navbar is transparent */
+}
+
+
+.cart-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to bottom right, #ee37ff, rgb(5, 99, 36));
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: #fff;
+    font-weight: 700;
+    transition: 0.3s;
+    margin-left: 20px;
+}
+
+.cart-button:hover {
+    background: linear-gradient(to bottom right, #72535d, #ff0055);
+}
+
+.cart-button i {
+    margin-right: 5px;
+}
+
+.fuino-text {
+    font-family: 'FuinoFont', sans-serif;
+    font-size: 36px;
+    font-weight: bold;
+    background: linear-gradient(to bottom right, #ee37ff, rgb(5, 99, 36));
+    -webkit-background-clip: text;
+    color: transparent;
+    display: inline-block;
+}
+
+.fuino-text:hover {
+    background: linear-gradient(to bottom right, #72535d, #ff0055);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+/* Styling for Header Title */
+.header-title {
+    flex: 1; /* Dynamically center between other elements */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.header-checkout {
+    font-family: 'Poppins', sans-serif; /* Modern and clean font */
+    font-size: 36px; /* Bold and noticeable font size */
+    font-weight: bold;
+    color: white; /* Base text color */
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3); /* Subtle shadow effect */
+    background: linear-gradient(to bottom right, #ee37ff, #ff0055); /* Eye-catching gradient */
+    -webkit-background-clip: text;
+    color: transparent; /* Gradient text effect */
+    letter-spacing: 1px; /* Slight spacing for a clean look */
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.header-checkout:hover {
+    transform: scale(1.05); /* Slight zoom on hover for interactivity */
+    opacity: 0.9; /* Softer hover effect */
+}
+
+/* Centered Checkout Container */
+.checkout-container {
+    max-width: 500px;
+    margin: 20px auto;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Form Title */
+.form-title {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    color: #009639;
+    margin-bottom: 20px;
+}
+
+/* Form Styling */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 14px;
+    font-weight: bold;
+    color: #555;
+    margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+    border-color: #009639;
+}
+
+/* Order Summary */
+.order-summary {
+    background: #f8f8f8;
+    padding: 15px;
+    border-radius: 5px;
+    margin-top: 20px;
+    text-align: center;
+    color: #444;
+}
+
+/* Checkout Button */
+.checkout-button {
+    display: block;
+    width: 100%;
+    background: linear-gradient(to right, #28a745, #1e7e34);
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    margin-top: 15px;
+}
+
+.checkout-button:hover {
+    background: linear-gradient(to right, #1e7e34, #28a745);
+}
+
+/* Popup Styling */
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.popup-content {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.popup-button {
+    margin-top: 15px;
+    padding: 10px 20px;
+    background: #009639;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.popup-button:hover {
+    background: #006627;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+    .checkout-container {
+        margin: 20px;
+        padding: 15px;
+    }
+
+    .form-title {
+        font-size: 20px;
+    }
+
+    .checkout-button {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    #navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+    }
+
+    .header-title {
+        text-align: left;
+    }
+
+    .cart-button {
+        margin-top: 10px;
+    }
+}

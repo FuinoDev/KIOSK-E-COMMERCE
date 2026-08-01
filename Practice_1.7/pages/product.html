@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FuinoWeb Products</title>
+    <link rel="stylesheet" href="../styles/product.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <style>@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap");</style>
+</head>
+<body>
+    <section class="header">
+        <div>
+            <ul id="navbar">
+                <div class="main-links">
+                    <li><a href="dashboard.php">Home</a></li>
+                    <li><a class="active" href="product.html">Products</a></li>    
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.php">Contact</a></li>
+                </div>
+                <p class="fuino-text">FuinoPlant</p>
+                <div class="auth-links">
+                    <li><a href="index.html">Login</a></li>
+                    <li><a href="register.html">Register</a></li>
+                    <a href="logout.php" class="logout-button">Logout</a>
+                    <li class="cart-button-container">
+                        <a href="#" class="cart-button">
+                            <i class="bx bx-cart"></i> Cart 
+                            <span class="cart-count">0</span>
+                        </a>
+                        <div class="cart-dropdown">
+                            <div class="cart-items"></div>
+                            <button class="checkout-button">Proceed to Buy</button>
+                        </div>
+                    </li>
+                </div>
+            </ul>
+        </div>
+    </section>
+    <section class="product-list-section">
+        <div class="product-list">
+            <!-- Product Card 1 -->
+            <div class="product-card">
+                <div class="product-image-container">
+                    <img src="../img/p1.webp" class="product-image" alt="Product 1">
+                </div>
+                <div class="product-info">
+                    <h4>Onion</h4>
+                    <p>₱10</p>
+                    <p>Average Rating: 4.3</p>
+                    <div class="stars">
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star-half'></i>
+                    </div>
+                    <a class="product-button" onclick="addToCart('Onion', 10)">Add to Cart</a>
+                </div>
+            </div>
+            <!-- Product Card 2 -->
+            <div class="product-card">
+                <div class="product-image-container">
+                    <img src="../img/p2.jpeg" class="product-image" alt="Product 2">
+                </div>
+                <div class="product-info">
+                    <h4>Cucumber</h4>
+                    <p>₱15</p>
+                    <p>Average Rating: 4.5</p>
+                    <div class="stars">
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star-half'></i>
+                    </div>
+                    <a class="product-button" onclick="addToCart('Cucumber', 15)">Add to Cart</a>
+                </div>
+            </div>
+            <!-- Product Card 3 -->
+            <div class="product-card">
+                <div class="product-image-container">
+                    <img src="../img/p3.jpeg" class="product-image" alt="Product 3">
+                </div>
+                <div class="product-info">
+                    <h4>Sweet Potato</h4>
+                    <p>₱25</p>
+                    <p>Average Rating: 4.7</p>
+                    <div class="stars">
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                    </div>
+                    <a class="product-button" onclick="addToCart('Sweet Potato', 25)">Add to Cart</a>
+                </div>
+            </div>
+            <!-- Product Card 4 -->
+            <div class="product-card">
+                <div class="product-image-container">
+                    <img src="../img/p4.jpeg" class="product-image" alt="Product 4">
+                </div>
+                <div class="product-info">
+                    <h4>Cauliflower</h4>
+                    <p>₱20 </p>
+                    <p>Average Rating: 4.6</p>
+                    <div class="stars">
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star-half'></i>
+                    </div>
+                    <a class="product-button" onclick="addToCart('Cauliflower', 20)">Add to Cart</a>
+                </div>
+            </div>
+            <!-- Product Card 5 -->
+            <div class="product-card">
+                <div class="product-image-container">
+                    <img src="../img/p5.jpeg" class="product-image" alt="Product 5">
+                </div>
+                <div class="product-info">
+                    <h4>Cabbage</h4>
+                    <p>₱18</p>
+                    <p>Average Rating: 4.4</p>
+                    <div class="stars">
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star-half'></i>
+                    </div>
+                    <a class="product-button" onclick="addToCart('Cabbage', 18)">Add to Cart</a>
+                 </div>
+            </div>
+            <!-- Product Card 6 -->
+             <div></div>
+            <div class="product-card">
+                <div class="product-image-container">
+                    <img src="../img/p6.webp" class="product-image" alt="Product 6">
+                </div>
+                <div class="product-info">
+                    <h4>Tomato</h4>
+                    <p>₱22</p>
+                    <p>Average Rating: 4.5</p>
+                    <div class="stars">
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star-half'></i>
+                    </div>
+                    <a class="product-button" onclick="addToCart('Tomato', 22)">Add to Cart</a>
+                </div>
+            </div>
+            <!-- Product Card 7 -->
+            <div class="product-card">
+                <div class="product-image-container">
+                    <img src="../img/p7.webp" class="product-image" alt="Product 7">
+                </div>
+                <div class="product-info">
+                    <h4>Carrot</h4>
+                    <p>₱24</p>
+                    <p>Average Rating: 4.8</p>
+                    <div class="stars">
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star-half'></i>
+                    </div>
+                    <a class="product-button" onclick="addToCart('Carrot', 24)">Add to Cart</a>                </div>
+            </div>
+            <!-- Product Card 8 -->
+            <div class="product-card">
+                <div class="product-image-container">
+                    <img src="../img/p8.jpeg" class="product-image" alt="Product 8">
+                </div>
+                <div class="product-info">
+                    <h4>Strawberry</h4>
+                    <p>₱100</p>
+                    <p>Average Rating: 4.6</p>
+                    <div class="stars">
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star-half'></i>
+                    </div>
+                    <a class="product-button" onclick="addToCart('Strawberry', 100)">Add to Cart</a>
+                                </div>
+            </div>
+                       <!-- Product Card 9 -->
+                       <div class="product-card">
+                        <div class="product-image-container">
+                            <img src="../img/p9.jpeg" class="product-image" alt="Product 9">
+                        </div>
+                        <div class="product-info">
+                            <h4>Banana</h4>
+                            <p>₱40</p>
+                            <p>Average Rating: 4.4</p>
+                            <div class="stars">
+                                <i class='bx bxs-star'></i>
+                                <i class='bx bxs-star'></i>
+                                <i class='bx bxs-star'></i>
+                                <i class='bx bxs-star'></i>
+                                <i class='bx bxs-star-half'></i>
+                            </div>
+                            <a class="product-button" onclick="addToCart('Banana', 40)">Add to Cart</a>                        </div>
+                    </div>
+                    <!-- Product Card 10 -->
+                    <div class="product-card">
+                        <div class="product-image-container">
+                            <img src="../img/p10.jpeg" class="product-image" alt="Product 10">
+                        </div>
+                        <div class="product-info">
+                            <h4>Originum</h4>
+                            <p>₱25</p>
+                            <p>Average Rating: 4.7</p>
+                            <div class="stars">
+                                <i class='bx bxs-star'></i>
+                                <i class='bx bxs-star'></i>
+                                <i class='bx bxs-star'></i>
+                                <i class='bx bxs-star'></i>
+                                <i class='bx bxs-star'></i>
+                            </div>
+                            <a class="product-button" onclick="addToCart('Originum', 25)">Add to Cart</a>                        </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+<!-- Sliding Cart Panel -->
+<div id="cart-panel" class="cart-panel">
+    <div class="cart-header">
+        <h2>Your Cart</h2>
+        <button id="close-cart" class="close-cart-button">&times;</button>
+    </div>
+    <div id="cart-items" class="cart-items">
+        <!-- Cart items will be dynamically populated here -->
+    </div>
+    <div class="cart-footer">
+        <p>Total: ₱<span id="cart-total">0</span></p>
+        <button class="checkout-button" onclick="window.location.href='checkout.php'">Proceed to Buy</button>
+    </div>
+</div>
+<div id="overlay" class="overlay"></div>
+
+
+            <script src="../scripts/product.js"></script>
+            <script>
+                const cartCountSpan = document.querySelector('.cart-count');
+                const cartItemsContainer = document.getElementById('cart-items');
+                const cartTotalElement = document.getElementById('cart-total');
+            
+                // Add to cart and update UI dynamically
+                function addToCart(name, price) {
+                    fetch('add_to_cart.php', {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({ name: name, price: price, quantity: 1 }) // Default quantity = 1
+                    })
+                    .then(response => response.json())
+                    .then(data => {
+                        if (data.status === 'success') {
+                            alert('Item added to cart!');
+                            updateCartUI(); // Update cart UI dynamically
+                        } else {
+                            alert('Failed to add item to cart.');
+                        }
+                    })
+                    .catch(error => console.error('Error:', error));
+                }
+            
+                // Update cart UI dynamically
+                function updateCartUI() {
+                    fetch('get_cart.php')
+                        .then(response => response.json())
+                        .then(data => {
+                            let total = 0;
+                            cartItemsContainer.innerHTML = ''; // Clear current cart
+            
+                            // Populate cart items
+                            data.cart.forEach(item => {
+                                const itemDiv = document.createElement('div');
+                                itemDiv.classList.add('cart-item');
+                                itemDiv.innerHTML = `
+                                    <p>${item.name} (x${item.quantity}) - ₱${item.price * item.quantity}</p>
+                                `;
+                                cartItemsContainer.appendChild(itemDiv);
+                                total += item.price * item.quantity;
+                            });
+            
+                            cartTotalElement.textContent = total; // Update total price
+                            cartCountSpan.textContent = data.cart.length; // Update cart count
+                        });
+                }
+            
+                // Initial update when the page loads
+                updateCartUI();
+            </script>
+            
+        </body>
+        </html>

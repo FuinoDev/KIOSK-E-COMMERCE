@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FuinoWeb - Login</title>
+    <link rel="stylesheet" href="../styles/style.css">
+    <link href="https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <style>@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap");</style>
+</head>
+<body>
+<div class="login">
+    <form id="loginForm" action="login.php" method="POST" class="login__form" aria-labelledby="login-title">
+        <h1 class="login__title" id="login-title">Login Now</h1>
+        <div class="login__content">
+            <div class="login__box">
+                <i class="bx bx-user" aria-hidden="true"></i>
+                <div class="login__box-input">
+                    <input class="login__input" type="text" id="username" name="username" aria-required="true" required>
+                    <label class="login__label" for="username">Username</label>
+                </div>
+            </div>
+            <div class="login__box">
+                <i class="ri-lock-2-line login__icon" aria-hidden="true"></i>
+                <div class="login__box-input">
+                    <input type="password" id="password" name="password" aria-required="true" required class="login__input">
+                    <label class="login__label" for="password">Password</label>
+                    <i class="ri-eye-off-line login__eye" id="login-eye" aria-label="Toggle password visibility"></i>
+                </div>
+            </div>
+            <div class="login__check">
+                <label class="login__check-label" for="rememberMe">
+                    <input type="checkbox" id="rememberMe" name="rememberMe" class="login__check-input">
+                    Remember Me
+                </label>
+            </div>
+        </div>
+        <button type="submit" class="login__button" aria-label="Log In">Log In</button>
+        <p class="login__register">
+           Don't have an account? <a href="register.html"><b>Sign Up</b></a>
+        </p>
+        <p class="or">
+            ----------------- OR -----------------
+        </p>
+        <div class="icons">
+           <a href="https://www.google.com"><i class="bx bxl-google"></i></a>
+           <a href="https://www.facebook.com"><i class="bx bxl-facebook"></i></a>
+        </div>
+    </form>
+</div>
+<script src="../scripts/script.js"></script>
+</body>
+</html> 

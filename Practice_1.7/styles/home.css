@@ -1,0 +1,363 @@
+@font-face {
+    font-family: 'FuinoFont';
+    src: url('path-to-your-font-file.woff2') format('woff2'),
+         url('path-to-your-font-file.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #fafffe;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    background-color: transparent;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+#navbar {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+    margin: 0 10px;
+    background-color: rgba(255, 255, 255, 0);
+}
+
+.main-links {
+    display: flex;
+    gap: 20px;
+}
+
+#navbar li {
+    margin: 0 10px;
+}
+
+#navbar a {
+    text-decoration: none;
+    color: #ffffff;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    position: relative;
+    padding: 5px 15px;
+    transition: color 0.3s;
+}
+#navbar a::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #009639;
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: all 0.3s ease-in-out;
+}
+
+#navbar a:hover::before {
+    visibility: visible;
+    transform: scaleX(1);
+}
+
+#navbar a:hover,
+#navbar li a.active {
+    color: #1fd01f;
+}
+#navbar li a.active::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #1fd01f;
+
+}
+
+.auth-links {
+    display: flex;
+    gap: 20px;
+    margin-left: auto;
+    margin-left: 30px;
+}
+
+.cart-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to bottom right, #ee37ff, rgb(5, 99, 36));
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: #fff;
+    font-weight: 700;
+    transition: 0.3s;
+    margin-left: 20px;
+}
+
+.cart-button:hover {
+    background: linear-gradient(to bottom right, #72535d, #ff0055);
+}
+
+.cart-button i {
+    margin-right: 5px;
+}
+
+.fuino-text {
+    font-family: 'FuinoFont', sans-serif;
+    font-size: 36px;
+    font-weight: bold;
+    background: linear-gradient(to bottom right, #ee37ff, rgb(116, 17, 255));
+    -webkit-background-clip: text;
+    color: transparent;
+    display: inline-block;
+}
+
+.fuino-text:hover {
+    background: linear-gradient(to bottom right, #72535d, #ff0055);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 50px;
+    background: url('../img/bg2.jpeg') no-repeat center center/cover;
+    position: relative;
+}
+
+.hero::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Adjust the transparency here */
+}
+
+.hero-content {
+    max-width: 600px;
+    text-align: left;
+    color: #fff;
+    position: relative;
+    z-index: 1;
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 24px;
+    margin-bottom: 30px;
+}
+
+.hero-button {
+    background: linear-gradient(to bottom right, #ee37ff, rgb(5, 99, 36));
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 700;
+    transition: 0.3s;
+}
+
+.hero-button:hover {
+    background: linear-gradient(to bottom right, #72535d, #ff0055);
+}
+
+.product-card {
+    position: relative;
+    width: 200px;
+    background: #ffffff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Existing shadow */
+    text-align: center;
+    margin: 10px;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    z-index: 2; /* Ensure it is on top of the background */
+}
+
+.product-card:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Enhanced shadow for better contrast */
+    transform: translateY(-10px);
+    background: white; /* Maintain solid background color on hover */
+    color: #000; /* Change text color to black on hover */
+}
+
+.product-image-container {
+    width: 100%;
+    padding-top: 100%; /* Aspect ratio */
+    position: relative;
+    border-radius: 15px; /* Adjust the radius as needed */
+    overflow: hidden;
+}
+
+.product-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image covers the container */
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover .product-image {
+    transform: scale(1.1); /* Zoom effect on hover */
+}
+
+.product-info {
+    padding: 15px;
+}
+
+.product-info h4 {
+    margin: 10px 0;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.product-info p {
+    margin: 10px 0;
+    font-size: 16px;
+    font-weight: 500;
+    color: #009639;
+}
+
+.stars {
+    display: flex;
+    justify-content: center;
+    margin: 10px 0;
+}
+
+.stars i {
+    color: #ffcc00;
+}
+
+.product-button {
+    background: linear-gradient(to bottom right, #ee37ff, rgb(5, 99, 36));
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 700;
+    transition: 0.3s;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.product-button:hover {
+    background: linear-gradient(to bottom right, #72535d, #ff0055);
+}
+
+.hero-images {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.product-list-section {
+    padding: 20px;
+}
+
+.product-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.product-card {
+    position: relative;
+    width: 200px;
+    background: #ffffff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin: 10px;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.product-card:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    transform: translateY(-10px);
+}
+
+.product-image-container {
+    width: 100%;
+    padding-top: 100%; /* Aspect ratio */
+    position: relative;
+}
+
+.product-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover .product-image {
+    transform: scale(1.1); /* Zoom effect on hover */
+}
+
+.product-info {
+    padding: 15px;
+}
+
+.product-info h4 {
+    margin: 10px 0;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.product-info p {
+    margin: 10px 0;
+    font-size: 16px;
+    font-weight: 500;
+    color: #009639;
+}
+
+.stars {
+    display: flex;
+    justify-content: center;
+    margin: 10px 0;
+}
+
+.stars i {
+    color: #ffcc00;
+}
+
+.product-button {
+    background: linear-gradient(to bottom right, #ee37ff, rgb(5, 99, 36));
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 700;
+    transition: 0.3s;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.product-button:hover {
+    background: linear-gradient(to bottom right, #72535d, #ff0055);
+}
+

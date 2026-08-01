@@ -1,0 +1,266 @@
+@font-face {
+    font-family: 'FuinoFont';
+    src: url('path-to-your-font-file.woff2') format('woff2'),
+         url('path-to-your-font-file.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: url('../img/ban.jpeg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+.header {
+    top: 0;
+    width: 100%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0);
+    z-index: 1000;
+    background-color: transparent; /* Ensure header is transparent */
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+#navbar {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+    margin: 0 10px;
+    background-color: rgba(255, 255, 255, 0); /* Ensure navbar is transparent */
+}
+
+.product-list-section {
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: 100px; /* Ensure space between header and products */
+}
+
+/* Keep the rest of your styles as they are */
+
+.main-links {
+    display: flex;
+    gap: 20px;
+}
+
+#navbar li {
+    margin: 0 10px;
+}
+
+#navbar a {
+    text-decoration: none;
+    color: #ffffff;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    position: relative;
+    padding: 5px 15px;
+    transition: color 0.3s;
+}
+
+#navbar a::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #009639;
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: all 0.3s ease-in-out;
+}
+
+#navbar a:hover::before {
+    visibility: visible;
+    transform: scaleX(1);
+}
+
+#navbar a:hover {
+    color: #1fd01f;
+}
+
+#navbar a:hover,
+#navbar li a.active {
+    color: #1fd01f;
+}
+
+#navbar li a.active::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #1fd01f;
+
+}
+
+.auth-links {
+    display: flex;
+    gap: 20px;
+    margin-left: auto;
+    margin-left: 30px;
+}
+
+.cart-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to bottom right, #ee37ff, rgb(5, 99, 36));
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: #fff;
+    font-weight: 700;
+    transition: 0.3s;
+    margin-left: 20px;
+}
+
+.cart-button:hover {
+    background: linear-gradient(to bottom right, #72535d, #ff0055);
+}
+
+.cart-button i {
+    margin-right: 5px;
+}
+
+.fuino-text {
+    font-family: 'FuinoFont', sans-serif;
+    font-size: 36px;
+    font-weight: bold;
+    background: linear-gradient(to bottom right, #ee37ff, rgb(5, 99, 36));
+    -webkit-background-clip: text;
+    color: transparent;
+    display: inline-block;
+}
+
+.fuino-text:hover {
+    background: linear-gradient(to bottom right, #72535d, #ff0055);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.about {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 20px;
+    background: rgba(255, 255, 255, 0.85); 
+    border-radius: 15px;
+    margin: px auto;
+    max-width: 800px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    margin-top: 0%;
+}
+
+.contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 20px;
+    background: rgba(255, 255, 255, 0.85); 
+    border-radius: 15px;
+    margin: 100px auto; 
+    max-width: 1000px; 
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    height: auto; 
+    margin-top: 0%;
+}
+
+.contact-content {
+    max-width: 1200px; 
+    text-align: center;
+}
+
+.contact h2 {
+    font-size: 46px; 
+    margin-bottom: 10px; 
+    color: #009639;
+}
+
+
+.contact p {
+    font-size: 20px; 
+    margin-bottom: 3px; 
+    padding: 20px;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 10px; 
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.form-group label {
+    font-size: 20   px; 
+    font-family: 'Poppins', sans-serif;
+    color: #009639;
+    margin-bottom: 5px; 
+}
+
+.form-group input,
+.form-group textarea {
+    padding: 8px; 
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px; 
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    transition: border-color 0.3s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #009639;
+}
+
+.contact-button {
+    background: linear-gradient(to bottom right, #ee37ff, rgb(5, 99, 36));
+    color: #fff;
+    padding: 15px 25px; 
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 700;
+    transition: 0.3s;
+}
+
+.contact-button:hover {
+    background: linear-gradient(to bottom right, #72535d, #ff0055);
+
+}
+
+.contact-info {
+    text-align: left;
+    margin: 0px auto; 
+    padding: 0px; 
+}
+
+.wave-bounce {
+    display: inline-block;
+    animation: waveBounce 4s infinite ease-in-out;
+}
+
+@keyframes waveBounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    25% {
+        transform: translateY(-10px);
+    }
+    50% {
+        transform: translateY(0);
+    }
+    75% {
+        transform: translateY(-5px);
+    }
+}
